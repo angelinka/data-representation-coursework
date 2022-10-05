@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<library>
+    <catalogue category="Technical">
+        <book>
+            <ISBN>12345</ISBN>
+            <title>Automate the Boring Stuff with Python</title>
+            <author>Al Sweigart</author>
+        </book>
+        <book>
+            <ISBN>11111</ISBN>
+            <title>Computational Mathematics, Algorithms, and Data Processing</title>
+            <author>Daniele Mortari, Yalchin Efendiev</author>
+        </book>
+    </catalogue>
+     <catalogue category="Cookery">
+        <book>
+            <ISBN>22222</ISBN>
+            <title>French Country Cooking</title>
+            <author>Elizabeth David</author>
+        </book>
+        <book>
+            <ISBN>33333</ISBN>
+            <title>The Complete Asian Cookbook</title>
+            <author>Charmaine Solomon</author>
+        </book>
+    </catalogue>
+</library>
