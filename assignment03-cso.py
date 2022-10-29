@@ -14,9 +14,13 @@ import json
 
 url = "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/2.0/en"
 
-response = requests.get(url)
-data = response.json()
-#print(data)
+def getAll():
+    response = requests.get(url)
+    return response.json()
+    
+def saveToFile():
+    with open("cso.json", 'wt') as fp:
+        print(json.dumps(getAll()), file=fp)
 
-with open("cso.json", 'wt') as fp:
-    json.dump(data, fp)
+if __name__ == "__main__":
+    saveToFile()
