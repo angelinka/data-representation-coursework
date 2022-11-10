@@ -6,6 +6,12 @@ Task: Write a program in python that will read a file from a repository,
 The program should then replace all the instances of the text "Andrew" with your name.
 The program should then commit those changes and push the file back to the repository.
 
+I have included two solutions for this. First is using the same file to make changes to 
+and upload back. Second is using two file and uploading new file with the changed content
+to GitHub while original stays untouched.
+
+Note: I have used my private repository "aprivateone" to test this. Text file "allAboutNames.txt"
+has been created in the repo. 
 '''
 # Importing necessary modules. Note: you might need to install them first.
 import requests
@@ -55,9 +61,11 @@ fin.write(data)
 fin.close()
 
 content = open("original_file.txt", "r").read()
+# replacing/updating content of the file on GitHub 
 gitHubResponse=repo.update_file(fileInfo.path,"Replaced name Andrew with Angelina",
 content, fileInfo.sha)
 print (gitHubResponse)
+
 '''
 # solution 2: using two files input file
 fin = open("original_file.txt", "rt")
